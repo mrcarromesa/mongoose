@@ -81,3 +81,22 @@ import mongoose from 'mongoose';
 const z = await schemaMongo.findByIdAndRemove(mongoose.Types.ObjectId('5e19aca7810cf9354a21a807'));
    res.json(z); 
 ```
+
+* Forma eficaz de update de registro:
+
+```js
+import mongoose from 'mongoose';
+
+// ...
+// ...
+
+// Busca
+const d = await schemaMongo.findById(mongoose.Types.ObjectId('5e17e89806a53a2353364e17'));
+// Altera
+d.name = 'Novo nome';
+
+// Salva alterações
+d.save();
+
+res.json(d);
+```
