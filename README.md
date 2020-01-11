@@ -20,7 +20,7 @@ import mongoose from 'mongoose';
 //mongodb:// -> sempre inicia com ele
 // localhost:27017 -> endereço mais porta
 // mongodb -> nome da base de dados
-mongoose.connect('mongodb://localhost:27017/mongodb', {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect('mongodb://localhost:27017/mongodb', {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false});
 ```
 
 * Criar schema:
